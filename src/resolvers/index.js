@@ -18,7 +18,10 @@ import ExoticGitLab from './exotics/gitlab-resolver.js';
 import ExoticGist from './exotics/gist-resolver.js';
 import ExoticBitbucket from './exotics/bitbucket-resolver.js';
 
+import ExoticMacrosoft from './exotics/macrosoft-resolver.js';
+
 export const exotics = {
+  macrosoft: ExoticMacrosoft,
   git: ExoticGit,
   tarball: ExoticTarball,
   github: ExoticGitHub,

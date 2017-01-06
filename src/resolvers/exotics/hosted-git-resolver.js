@@ -201,7 +201,7 @@ export default class HostedGitResolver extends ExoticResolver {
     // If we can access the files over HTTP then we should as it's MUCH faster than git
     // archive and tarball unarchiving. The HTTP API is only available for public repos
     // though.
-    if (await this.hasHTTPCapability(httpUrl)) {
+    if (httpUrl && await this.hasHTTPCapability(httpUrl)) {
       return await this.resolveOverHTTP(httpUrl);
     }
 
